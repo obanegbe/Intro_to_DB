@@ -18,8 +18,8 @@ def create_database():
 
             print("Database 'alx_book_store' created successfully!")
 
-    except Error as e:
-        print(f"Error connecting to MySQL server: {e}")
+    except mysql.connector.Error:
+        print(f"Error connecting to MySQL server")
 
     finally:
         # Clean up: close cursor and connection
